@@ -1,6 +1,5 @@
 import streamlit as st
 from evalml.preprocessing import split_data
-from evalml import AutoMLSearch
 from evalml.demos.churn import load_churn
 from evalml.objectives import CostBenefitMatrix
 from evalml import AutoMLSearch
