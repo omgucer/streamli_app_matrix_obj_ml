@@ -1,11 +1,10 @@
 import streamlit as st
-import evalml 
+from evalml.preprocessing import split_data
 from evalml import AutoMLSearch
 from evalml.demos.churn import load_churn
 from evalml.objectives import CostBenefitMatrix
 from evalml import AutoMLSearch
 import pandas as pd
-import lux
 from evalml.model_understanding.graphs import graph_confusion_matrix
 from evalml.model_understanding.graphs import graph_roc_curve
 import woodwork as ww
@@ -38,7 +37,7 @@ def model_builder( data_train, y_train):
 
     return automl_churn_model
      
-x_train, x_test, y_train, y_test = evalml.preprocessing.split_data(x,y_,test_size= 0.2,problem_type='binary',random_seed = 0) 
+x_train, x_test, y_train, y_test = split_data(x,y_,test_size= 0.2,problem_type='binary',random_seed = 0) 
 
 
 automl_churn = model_builder(x_train,y_train )
