@@ -8,6 +8,7 @@ from evalml.model_understanding.graphs import graph_confusion_matrix
 from evalml.model_understanding.graphs import graph_roc_curve
 import woodwork as ww
 
+st.set_page_config(page_tittle = 'ML Classification' , page_icon = ':computer:' )
 # Set up the sidebar to display#
 #----------------------------------------------------------------------------------------------------#
 x,y_ = load_churn()
@@ -161,3 +162,14 @@ with more_plots:
     st.plotly_chart(plotly_plot_roc, use_container_width = True)
     
     st.plotly_chart(plotly_plot_mat,use_container_width = True)
+    
+    
+hide_st_style = """ 
+             <style>
+             #MainMenu {visibility: hidden;}
+             footer {visibility: hidden;}
+             header {visibility: hidden;}
+             </style>
+             
+             """
+st.markdown(hide_st_style, unsafe_allow_html= True)
