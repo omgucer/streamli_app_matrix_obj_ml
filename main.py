@@ -8,7 +8,7 @@ from evalml.model_understanding.graphs import graph_confusion_matrix
 from evalml.model_understanding.graphs import graph_roc_curve
 import woodwork as ww
 
-st.set_page_config(page_tittle = 'ML Classification' , page_icon = ':computer:' )
+st.set_page_config(page_title = 'ML Classification' , page_icon = ':computer:', layout='wide' )
 # Set up the sidebar to display#
 #----------------------------------------------------------------------------------------------------#
 x,y_ = load_churn()
